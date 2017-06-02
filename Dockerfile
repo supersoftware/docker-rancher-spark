@@ -18,6 +18,9 @@ ENV PATH=/app/bin:/app/sbin:~/.local/bin:$PATH
 ENV AWS_ACCESS_KEY_ID=xxxxxxxxx
 ENV AWS_SECRET_ACCESS_KEY=xxxxxxxxx
 ENV AWS_DEFAULT_REGION=us-east-1
+ENV ENDPOINT_URL=http://lb.minio:9000
+ENV APP_PATH=s3://dist/spark-app-assembly.jar
+ENV ASSEMBLY_NAME=spark-app-assembly.jar
 WORKDIR /app
 
 # entry point

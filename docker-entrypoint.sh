@@ -14,4 +14,7 @@ if [ "$1" = 'worker' ]; then
   exec tail -f logs/$(ls logs)
 fi
 
+# download fat-jar from s3
+aws --endpoint-url $ENDPOINT_URL s3 cp $APP_PATH $ASSEMBLY_NAME
+
 exec "$@"
