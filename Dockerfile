@@ -2,7 +2,7 @@ FROM java:8-jre
 
 # install aws-cli
 RUN apt-get update \
- && apt-get install python python-pip \
+ && apt-get -y install python python-pip \
  && pip install awscli --upgrade --user
 
 # install spark
